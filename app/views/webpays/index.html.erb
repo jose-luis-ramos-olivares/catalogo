@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Webpays</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @webpays.each do |webpay| %>
+      <tr>
+        <td><%= link_to 'Show', webpay %></td>
+        <td><%= link_to 'Edit', edit_webpay_path(webpay) %></td>
+        <td><%= link_to 'Destroy', webpay, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Webpay', new_webpay_path %>
